@@ -7,6 +7,7 @@ export const Image = () => {
             src={shape}
             alt="Image shape"
             priority
+            placeholder="blur"
             className="hidden lg:flex max-w-[50vw] w-full h-[100vh] object-cover"
         />
     );

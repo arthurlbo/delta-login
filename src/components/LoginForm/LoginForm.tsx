@@ -13,15 +13,15 @@ const loginSchema = z.object({
     email: z
         .string()
         .nonempty({
-            message: "O e-mail é obrigatório",
+            message: "The E-mail is required",
         })
         .email({
-            message: "Formato de e-mail inválido",
+            message: "Invalid Email format",
         }),
     password: z.string().nonempty({
-        message: "A senha é obrigatória",
+        message: "The password is required",
     }),
-    remember: z.boolean(),
+    remember: z.boolean().default(true),
 });
 
 type LoginData = z.infer<typeof loginSchema>;
